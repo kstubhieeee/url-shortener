@@ -2,7 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-black;
+}
 
 *::-webkit-scrollbar {
   display: none;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-yellow-900 via-amber-800 to-yellow-900;
+}
+
+.gradient-btn {
+  @apply bg-gradient-to-r from-yellow-600 to-amber-500 hover:from-yellow-700 hover:to-amber-600 
+  shadow-[0_0_15px_rgba(245,158,11,0.1)] hover:shadow-[0_0_20px_rgba(245,158,11,0.2)];
+}
+
+.input-field {
+  @apply w-full px-4 py-2 bg-black border border-yellow-500/30 focus:border-yellow-500 rounded-md text-white 
+  placeholder-gray-500 focus:outline-none transition-colors focus:shadow-[0_0_10px_rgba(245,158,11,0.1)];
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
 }
